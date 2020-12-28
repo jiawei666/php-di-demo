@@ -9,15 +9,18 @@ use DI\Annotation\Inject;
 class UserController
 {
 
-    /**
-     * @Inject
-     * @var FormFactoryInterface
-     */
+
     private $formFactory;
 
-    public function createForm($type, $data, $options)
+    public function __construct(FormFactoryInterface $formFactory)
     {
-        // $this->formFactory->...
+        $this->formFactory = $formFactory;
+    }
+
+    public function createForm()
+    {
+         $res = $this->formFactory->get();
+         return $res;
     }
 
 }

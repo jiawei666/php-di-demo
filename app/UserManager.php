@@ -10,12 +10,8 @@ class UserManager
         $this->mailer = $mailer;
     }
 
-    public function register($email, $password)
+    public function register($email, $content)
     {
-        // The user just registered, we create his account
-        // ...
-
-        // We send him an email to say hello!
-        $this->mailer->mail($email, 'Hello and welcome!');
+        return $this->mailer->mail($email, $content);
     }
 }
