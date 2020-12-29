@@ -18,8 +18,8 @@ class BestGuideTest extends TestCase
         $builder->addDefinitions([
 //            \App\BestGuide\OrderService::class => \DI\autowire()->constructorParameter('paramName', 'a value'),
 //            \App\BestGuide\OrderServiceInterface::class => \DI\get(\App\BestGuide\OrderService::class),
-//            FormFactoryInterface::class => \DI\create(FormFactory::class),
-            \App\BestGuide\UserController::class => \DI\create()->constructor(\DI\get(\App\BestGuide\FormFactory::class)),
+            FormFactoryInterface::class => \DI\create(FormFactory::class),
+//            \App\BestGuide\UserController::class => \DI\create()->constructor(\DI\get(\App\BestGuide\FormFactory::class)),
         ]);
 
         $builder->useAnnotations(true);
