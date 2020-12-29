@@ -12,7 +12,7 @@ use App\Definition\MysqlDatabaseRepository;
  */
 class DefinitionTest extends TestCase
 {
-    public function testUserController()
+    public function testMysqlController()
     {
         $builder = new \DI\ContainerBuilder();
         $builder->addDefinitions('./app/Definition/config.php');
